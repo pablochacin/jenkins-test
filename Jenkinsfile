@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh "env"
-                sh "pwd"
-                sh "ls -l"
+                sh 'env'
+                sh 'pwd'
+                sh 'ls -l'
                 sh "${env.WORKSPACE}/ci-scripts/hello.sh"
             }
         }
