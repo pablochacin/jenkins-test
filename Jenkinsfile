@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh "{env.WORKSPACE}@script/hello.sh'
+                sh "{env.WORKSPACE}@script/hello.sh"
             }
         }
     }
