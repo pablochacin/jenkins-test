@@ -1,8 +1,15 @@
+node('master'){
+    stage('save script'){
+        stash name: 'scripts' includes: "${env.WORKSPACE}@script"
+    }
+}
+
 pipeline {
     agent { label 'worker' }
     stages {
         stage('build') {
             steps {
+                unstash name: 'scripts'
                 sh 'env'
                 sh 'pwd'
                 sh 'ls -l'
