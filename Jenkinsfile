@@ -6,7 +6,7 @@ pipeline {
                 sh 'env'
                 sh 'pwd'
                 sh 'ls -l'
-                sh "${env.WORKSPACE}@script/ci-script/hello.sh"
+                sh "${env.WORKSPACE}@script/hello.sh"
             }
         }
     }
