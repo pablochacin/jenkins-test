@@ -1,6 +1,6 @@
 node('master'){
     stage('save script'){
-        stash name: 'scripts', includes: "${env.WORKSPACE}@script"
+        stash name: 'scripts', includes: "${env.WORKSPACE}@script/**"
     }
 }
 
