@@ -10,10 +10,10 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                unstash name: 'scripts'
                 sh 'env'
                 sh 'pwd'
                 sh 'ls -l'
+                unstash name: 'scripts'
                 sh "${env.WORKSPACE}@script/hello.sh"
             }
         }
