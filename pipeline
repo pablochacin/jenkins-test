@@ -8,7 +8,7 @@ def execute(String workspace) {
     }
     
     stage("Hello"){
-       sh "${workspace}/hello.sh"
+       sh "hello.sh"
     }
 }
 
