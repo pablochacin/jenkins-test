@@ -1,0 +1,11 @@
+def run() {
+    stage ("Build") {
+        echo "Build"
+    }
+
+    stage ("Test") {
+       echo "Test"
+    }
+}
+
+return this
