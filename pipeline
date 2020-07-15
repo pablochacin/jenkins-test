@@ -1,10 +1,14 @@
-def execute() {
+def execute(String workspace) {
     stage ("Build") {
         echo "Build"
     }
 
     stage ("Test") {
        echo "Test"
+    }
+    
+    stage("Hello"){
+       sh "${workspace}/hello.sh"
     }
 }
 
