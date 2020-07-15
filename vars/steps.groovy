@@ -1,7 +1,7 @@
-void build() {
+def build() {
     echo "building ..."
 }
 
-void test() {
+def test() {
    echo "testing ..."
 }
