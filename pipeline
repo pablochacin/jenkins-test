@@ -1,4 +1,4 @@
-def run() {
+def execute() {
     stage ("Build") {
         echo "Build"
     }
