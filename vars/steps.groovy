@@ -1,7 +1,7 @@
-def build(String target) {
+def mybuild(String target) {
     echo "building ${target}..."
 }
 
-def test(String target) {
+def mytest(String target) {
     echo "testing ${target}..."
 }
