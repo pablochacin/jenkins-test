@@ -5,3 +5,5 @@ def build() {
 def test() {
    echo "testing ..."
 }
+
+return this
