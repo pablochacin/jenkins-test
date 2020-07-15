@@ -1,4 +1,4 @@
-def execute(String workspace) {
+def execute() {
     stage ("Build") {
         echo "Build"
     }
@@ -6,7 +6,9 @@ def execute(String workspace) {
     stage ("Test") {
        echo "Test"
     }
-    
+}
+
+def hello(String workspace) {
     stage("Hello"){
        sh "${workspace}/hello.sh"
     }
