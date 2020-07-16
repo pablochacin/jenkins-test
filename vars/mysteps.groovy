@@ -1,11 +1,11 @@
 def build(String target) {
-    stage{
+    stage("build"){
        echo "building ${target}..."
     }
 }
 
 def test(String target) {
-    stage {
+    stage ("test"){
        echo "testing ${target}..."
     }
 }
