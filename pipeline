@@ -1,17 +1,15 @@
-def execute() {
-    stage ("Build") {
-        echo "Build"
-    }
+//stages.groovy
 
-    stage ("Test") {
-       echo "Test"
-    }
+void build(env) {
+	stage("build"){    
+    	sh "${env.WORKSPACE}/helper.sh 'building'"
+	}
 }
 
-def hello(String workspace) {
-    stage("Hello"){
-       sh "${workspace}/hello.sh"
-    }
+void test(env) {
+	stage("test"){           
+    	sh "${env.WORKSPACE}/helper.sh 'testing'"
+	}
 }
 
 return this
