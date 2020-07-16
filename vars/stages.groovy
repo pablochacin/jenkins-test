@@ -5,9 +5,9 @@ def build(String target) {
 }
 
 def test(String target) {
-    stage ("test"){ steps {
+    stage ("test"){
        echo "testing ${target}..."
-    }}
+    }
 }
 
 def pipeline(String target) {
