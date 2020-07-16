@@ -9,3 +9,8 @@ def test(String target) {
        echo "testing ${target}..."
     }
 }
+
+def pipeline(String target) {
+    build(target)
+    test(target)
+}
