@@ -1,0 +1,17 @@
+def execute() {
+    stage ("Build") {
+        echo "Build"
+    }
+
+    stage ("Test") {
+       echo "Test"
+    }
+}
+
+def hello(String workspace) {
+    stage("Hello"){
+       sh "${workspace}/hello.sh"
+    }
+}
+
+return this
