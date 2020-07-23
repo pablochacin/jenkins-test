@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'ls -l'
-                sh "${WORKSPACE}/hello.sh"
+                sh "${WORKSPACE}/helper.sh 'building'"
             }
         }
     }
