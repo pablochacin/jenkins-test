@@ -16,4 +16,11 @@ pipeline {
             }
         }
     }
+    post{ 
+        cleanup {
+            dir("${WORKSPACE}"){
+                deleteDir()
+            }
+        }
+    }
 }
