@@ -1,8 +1,7 @@
 node('master'){
     stage('save script'){
-        sh "ls -l ${env.WORKSPACE}@script/"
-        stash name: 'scripts', includes: "${env.WORKSPACE}@script/hello.sh"
-        echo 'stashed'
+        sh "pwd"
+        sh "ls -l"
     }
 }
 
@@ -11,11 +10,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'env'
                 sh 'pwd'
                 sh 'ls -l'
-                unstash name: 'scripts'
-                sh "${env.WORKSPACE}@script/hello.sh"
+                sh "hello.sh"
             }
         }
     }
